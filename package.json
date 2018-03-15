@@ -9,7 +9,7 @@
   "scripts": {
     "build-client": "webpack",
     "build-client-watch": "webpack -w",
-    "deploy": "script/deploy",
+    "deploy": "git checkout -b deploy && webpack -p && git add -f public/bundle.js public/bundle.js.map && git commit --allow-empty -m 'Deploying' && git push --force heroku deploy:master && git checkout master && git branch -D deploy",
     "lint": "eslint ./ --ignore-path .gitignore",
     "postinstall": "touch secrets.js",
     "seed": "node script/seed2.js",
@@ -49,9 +49,7 @@
     "socket.io": "^2.0.3",
     "stripe": "^5.4.0",
     "superagent": "^3.8.2",
-    "victory": "^0.24.5"
-  },
-  "devDependencies": {
+    "victory": "^0.24.5",
     "axios-mock-adapter": "^1.9.0",
     "babel-core": "^6.22.1",
     "babel-eslint": "^8.0.1",
