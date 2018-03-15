@@ -6,6 +6,9 @@
     "node": ">= 7.0.0"
   },
   "main": "index.js",
+  "production": {
+    "use_env_variable": "DATABASE_URL"
+  },
   "scripts": {
     "build-client": "webpack",
     "build-client-watch": "webpack -w",
