@@ -6,8 +6,6 @@ import { UserInterface } from './components'
 import { Router } from 'react-router-dom';
 import history from './history'
 
-// establishes socket connection
-import './socket'
 
 ReactDOM.render(
   <Provider store={store}>
