@@ -268,7 +268,8 @@ main {
   top: -2em;
 }
 .cart-container {
-  width: 40%;
+  width: 80%;
+  max-width: 400px;
   margin: auto;
   padding-bottom: 2%;
   padding-top: 1em;
@@ -278,15 +279,12 @@ main {
 }
 
 .product-image-cart {
-  width: 225px;
-    border: solid lightgrey;
+  width: 100%;
+  border: solid lightgrey;
   border-width: 1px;
   border-radius: 1em;
 }
 
-.product-image-cart-wrapper {
-  flex: 1;
-}
 
 .cart-product-outer-box {
   justify-content: space-between;
@@ -298,19 +296,56 @@ main {
   display: flex;
   flex-direction: column;
   margin-left: 1em;
+  width: 40%;
+  font-size: 12px;
 }
 
-.cart-pricing-wrapper {
+
+.productPricingWrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
-  margin-bottom: 4%;
-  margin-top: 2em;
+  margin-bottom: .5em;
+  margin-top: 1em;
 }
+
+
+.cartPricingWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  margin-bottom: .5em;
+  margin-top: 2em;
+  border-top: solid lightgrey;
+  border-width: 1px;
+  padding-top: 1em;
+}
+
+
+#checkout-container{
+  margin: 0 auto;
+  position: relative;
+  top: -3.5em;
+}
+
+.checkout-row {
+  display: flex;
+  /*flex-direction: row;*/
+  justify-content: space-between;
+  align-content: center;
+  margin-bottom: 1em;
+}
+
+.checkout-row label{
+  width: 50%;
+}
+
 
 #quantity-select{
   width: 3em;
+  font-size: 12px;
 }
 
 
@@ -329,6 +364,7 @@ main {
   margin-left: 1em;
   width:3em;
   text-align: center;
+  font-size: 12px;
 }
 
 
@@ -646,7 +682,7 @@ td {
 }
 
 thead{
-  background-color: #b3e293;
+  background-color: #9fe2fc;
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
 }
@@ -658,8 +694,8 @@ table tr:last-child > td {
 #users-view-container{
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  margin-left: 3em;
+  width: 80%;
+  margin-left:4em;
 }
 
 
@@ -667,6 +703,7 @@ table tr:last-child > td {
   margin: 0;
   border-radius: 1em;
   border: 1px solid #aaa;
+  width: 100%;
 }
 
 #users-table-container{
@@ -710,4 +747,35 @@ table tr:last-child > td {
 #edit-user-buttons{
   display: flex;
   flex-direction: column;
+}
+
+#reviewForm{
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid #aaa;
+ border-radius: 1em;
+ padding: 2em;
+}
+
+#starRating{
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  max-width: 175px;
+  margin-bottom: 2em;
+}
+
+#reviewItemName{
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  align-content: flex-start;
+  width: 40%;
+  margin-bottom: 2em;
+}
+
+#reviewArea{
+  width: 60%;
+  margin-bottom: 2em;
+  min-height: 10em;
 }

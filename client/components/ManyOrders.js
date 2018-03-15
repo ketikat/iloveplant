@@ -41,7 +41,7 @@ export class ManyOrders extends Component {
     return (
       <div>
       <div>
-        <h3>Orders:</h3>
+        <h3>ORDERS</h3>
         <ReactTable
           data={data}
           columns={columns}

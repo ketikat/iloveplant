@@ -27,16 +27,28 @@ class CartCheckout extends Component {
     if (this.state.email.length && this.state.address.length) checkoutDisabled = false;
 
     return (
-      <div className="container">
+      <div>
         <Cart isInCheckout='true'/>
-        <div className="form order-form cart-container">
-          <div className="form-group">
-            <label htmlFor="address">SHIPPING ADDRESS</label>
-            <input className="form-control" name="address" id="addressI" onChange={this.handleChange} value={this.state.address} placeholder="Your address"></input>
-            <label htmlFor="address" className="email-input">EMAIL</label>
-            <input className="form-control" name="email" id="emailI" onChange={this.handleChange} value={this.state.email} placeholder="Your email"></input>
+        <div  id="checkout-container" className="form order-form cart-container">
+          <div className="checkout-form">
+
+          <div className="checkout-row">
+            <label htmlFor="address">
+              SHIPPING ADDRESS
+            </label>
+            <input className="form-control" name="address" id="addressI" onChange={this.handleChange} value={this.state.address} placeholder="Your address">
+            </input>
+            </div>
+            <div className="checkout-row">
+            <label htmlFor="address" className="email-input">
+            EMAIL
+            </label>
+            <input className="form-control" name="email" id="emailI" onChange={this.handleChange} value={this.state.email} placeholder="Your email">
+            </input>
+            </div>
            </div>
-            <button type="submit" disabled={checkoutDisabled}className="btn btn-primary" onClick={(evt) => this.props.handleOrderSubmit(evt, orderInfoObj)}>PLACE MY ORDER</button>
+
+            <button type="submit" disabled={checkoutDisabled}className="btn btn-primary btn-block" onClick={(evt) => this.props.handleOrderSubmit(evt, orderInfoObj)}>PLACE MY ORDER</button>
         </div>
       </div>
     )

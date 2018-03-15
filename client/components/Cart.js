@@ -102,7 +102,7 @@ class Cart extends Component {
                     </Link>
                   </div>
                   <div className="cart-product-inner-box">
-                    <div className="cart-pricing-wrapper">
+                    <div className="productPricingWrapper">
                       <Link
                         className="product-link"
                         to={`/products/${product.id}`}
@@ -119,7 +119,7 @@ class Cart extends Component {
                         </button>
                       </span>
                     </div>
-                    <div className="cart-pricing-wrapper">
+                    <div className="productPricingWrapper">
                       <span>${product.price * product.cartQuantity}</span>
                       <span>{createInvDD(product)}</span>
                     </div>
@@ -129,7 +129,7 @@ class Cart extends Component {
             );
           })}
 
-          <div className="cart-pricing-wrapper">
+          <div className="cartPricingWrapper">
             <div id="cart-total">TOTAL: ${cartTotal}</div>
             {!isInCheckout && (
               <Link to="/checkout">

@@ -35,7 +35,7 @@ class ViewUser extends Component {
                     <br/>
 
                     {
-                      user.isAdmin?
+                      !user.isAdmin?
                       <div id="edit-user-buttons">
                         <button className="btn btn-sm btn-info" onClick={this.props.handlePassword}>
                           Prompt Password Reset
