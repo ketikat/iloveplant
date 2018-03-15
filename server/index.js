@@ -11,6 +11,7 @@ const sessionStore = new SequelizeStore({db})
 const PORT = process.env.PORT || 8080
 const app = express()
 const socketio = require('socket.io')
+var coolAF = require('cool-ascii-faces')
 module.exports = app
 
 
@@ -70,6 +71,10 @@ const createApp = () => {
   // static file-serving middleware
   app.use(express.static(path.join(__dirname, '..', 'public')))
 
+    app.get('/cool', function(request, response) {
+   response.send(coolAF())
+  })
+
   // any remaining requests with an extension (.js, .css, etc.) send 404
   app.use((req, res, next) => {
     if (path.extname(req.path).length) {
@@ -85,6 +90,8 @@ const createApp = () => {
   app.use('*', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'public/index.html'))
   })
+
+
 
   // error handling endware
   app.use((err, req, res, next) => {

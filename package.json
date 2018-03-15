@@ -1,7 +1,7 @@
 {
-  "name": "i-love-plant",
+  "name": "iloveplant",
   "version": "1.0.0",
-  "description": "Some boilerplate code to get you started - get shakin'!",
+  "description": "plantShop",
   "engines": {
     "node": ">= 7.0.0"
   },
@@ -25,6 +25,7 @@
     "body-parser": "^1.16.1",
     "compression": "^1.7.1",
     "connect-session-sequelize": "^4.1.0",
+    "cool-ascii-faces": "1.3.4",
     "express": "^4.14.1",
     "express-session": "^1.15.1",
     "history": "^4.6.3",
