@@ -10,7 +10,7 @@ const db = require('./db')
 const sessionStore = new SequelizeStore({db})
 const PORT = process.env.PORT || 8080
 const app = express()
-var coolAF = require('cool-ascii-faces')
+
 module.exports = app
 
 
@@ -70,17 +70,6 @@ const createApp = () => {
   // static file-serving middleware
   app.use(express.static(path.join(__dirname, '..', 'public')))
 
-//   app.get('/cool', function(request, response) {
-//    response.send(coolAF())
-//   })
-
-//   app.get('/times', function(request, response) {
-//     let result = ''
-//     const times = process.env.TIMES || 5
-//     for (i=0; i < times; i++)
-//       result += i + ' '
-//   response.send(result)
-// })
 
   // any remaining requests with an extension (.js, .css, etc.) send 404
   app.use((req, res, next) => {

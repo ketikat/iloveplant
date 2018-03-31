@@ -82,6 +82,7 @@ header li {
 #admin-nav {
   background-color: #12BEFF;
 }
+
 #welcome {
   margin-top: 135px;
 }
@@ -483,6 +484,10 @@ main {
     font-size: 24px;
   }
 
+  #admin-nav h1{
+     font-size: 22px;
+  }
+
   .nav-item{
       font-size: 10px;
       margin: .5em;
@@ -695,7 +700,7 @@ table tr:last-child > td {
   display: flex;
   flex-direction: column;
   width: 80%;
-  margin-left:4em;
+  margin: 0 auto;
 }
 
 

@@ -37,7 +37,7 @@ class UserInterface extends Component {
         const { isLoggedIn, isAdmin, resetPassword } = this.props
 
         return (
-            <div id="UIContainer">
+            <div>
                 <NavBar />
                 <main>
                     <Switch>
@@ -84,7 +84,7 @@ class UserInterface extends Component {
                                 <Route path="/home" component={ManyProducts} />
                                 <Route exact path="/account" component={SingleUser} />
                                 <Route exact path="/orders" component={ManyOrders} />
-                                <Route exact path="/users/:userId" component={ViewUser} />
+                                <Route path="/users/:userId" component={ViewUser} />
                                 {/* <Route path="/orders/:orderId" component={SingleOrder} />*/}
                             </Switch>
                         }

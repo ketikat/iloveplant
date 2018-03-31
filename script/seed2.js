@@ -165,12 +165,12 @@ const reviews = [
 // 10pencil_cactus
   {content: 'very cool looking!', rating: 4, productId: 10, userId: 4},
   {content: 'i love this guy!', rating: 5, productId: 10, userId: 1},
-// 11majesty_palm
-  {content: 'this plant died on me right away', rating: 1, productId: 11, userId: 4},
-// 12TREE_PHILODENDRON
-  {content: 'this plant is so easy to care for, and keeps growing new tendrils every week!', rating: 5, productId: 12, userId: 4},
+// 12majesty_palm
+  {content: 'this plant died on me right away', rating: 1, productId: 12, userId: 4},
+// 11TREE_PHILODENDRON
+  {content: 'this plant is so easy to care for, and keeps growing new tendrils every week!', rating: 5, productId: 11, userId: 4},
 
-  {content: 'WOW what a plant!', rating: 5, productId: 12, userId: 3}
+  {content: 'WOW what a plant!', rating: 5, productId: 11, userId: 3}
 ]
 
 const orderItemData = [
@@ -181,38 +181,75 @@ const orderItemData = [
 ]
 
 function prodCat () {
-  return Product.findById(2)
+  return Product.findById(1)
   .then(found => {
-    return found.setCategories([2,4,5,6])
+    return found.setCategories([3,5,6])
     })
   .then(() => {
-    return Product.findById(1)
+    return Product.findById(2)
     .then(found2 => {
-      return found2.setCategories([1,4,5])
+      return found2.setCategories([1,2,4])
     })
   })
   .then(() => {
     return Product.findById(3)
     .then(found3 => {
-      return found3.setCategories([3,5,6])
+      return found3.setCategories([1,5,6])
     })
   })
   .then(() => {
     return Product.findById(4)
     .then(found2 => {
-      return found2.setCategories([2,5])
+      return found2.setCategories([3,5,6])
     })
   })
   .then(() => {
     return Product.findById(5)
     .then(found2 => {
-      return found2.setCategories([2,5,6])
+      return found2.setCategories([1,2,4,5,6])
     })
   })
   .then(() => {
     return Product.findById(6)
     .then(found2 => {
-      return found2.setCategories([3,4,5])
+      return found2.setCategories([1,4,5])
+    })
+  })
+
+  .then(() => {
+    return Product.findById(7)
+    .then(found2 => {
+      return found2.setCategories([2,4,5,6])
+    })
+  })
+  .then(() => {
+    return Product.findById(8)
+    .then(found2 => {
+      return found2.setCategories([1,4,5,6])
+    })
+  })
+  .then(() => {
+    return Product.findById(9)
+    .then(found2 => {
+      return found2.setCategories([2,3,4,5,6])
+    })
+  })
+  .then(() => {
+    return Product.findById(10)
+    .then(found2 => {
+      return found2.setCategories([1,5,6])
+    })
+  })
+  .then(() => {
+    return Product.findById(11)
+    .then(found2 => {
+      return found2.setCategories([3,4,5,6])
+    })
+  })
+  .then(() => {
+    return Product.findById(12)
+    .then(found2 => {
+      return found2.setCategories([3,6])
     })
   })
   }
